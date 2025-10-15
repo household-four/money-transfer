@@ -1,13 +1,9 @@
 -Xajruntimetarget:1.5
--17
+-1.8
 -showWeaveInfo
--source
-17
--target
-17
 -verbose
 -classpath
-C:\Users\Owner\.m2\repository\org\aspectj\aspectjrt\1.9.22.1\aspectjrt-1.9.22.1.jar;C:\Users\Owner\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\target\classes
+C:\Users\Owner\.m2\repository\org\aspectj\aspectjrt\1.9.24\aspectjrt-1.9.24.jar;C:\Users\Owner\.m2\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar;C:\Users\Owner\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\target\classes
 -d
 C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\target\classes
 -s
