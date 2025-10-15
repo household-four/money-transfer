@@ -1,4 +1,4 @@
-package MoneyTransfer;
+package barr;
 
 import java.lang.*;
 import java.io.*;
@@ -17,7 +17,7 @@ public aspect MoneyTransferServiceAspect {
 	
      before (MoneyTransferService s, Account acc1, Account acc2, double amount): 
         manageTransaction(s,acc1,acc2,amount) { 
-	try{
+	try{ 
         s.info("Transaction initiated...");
 	}catch(Exception e){}
     }

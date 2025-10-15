@@ -1,4 +1,4 @@
-package MoneyTransfer;
+package barr;
 
 import java.lang.*;
 import java.io.*;

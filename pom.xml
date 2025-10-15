@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>barr</groupId>
+  <artifactId>moneytransfer</artifactId>
+  <version>1.0.0</version>
+
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <junit.version>5.10.2</junit.version>
+    <mockito.version>5.11.0</mockito.version>
+    <aspectj.version>1.9.22.1</aspectj.version>
+    <aspectj.weaver>${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar</aspectj.weaver>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>${aspectj.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>aspectj-maven-plugin</artifactId>
+      <version>1.15.0</version>
+      <configuration>
+        <aspectjVersion>1.9.22.1</aspectjVersion>
+        <complianceLevel>17</complianceLevel>
+        <source>17</source>
+        <target>17</target>
+        <showWeaveInfo>true</showWeaveInfo>
+        <verbose>true</verbose>
+      </configuration>
+      <executions>
+        <execution>
+          <goals>
+            <goal>compile</goal>
+            <goal>test-compile</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+
+    <!-- Trying to disable the standard compiler so we use ajc instead-->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.13.0</version>
+      <executions>
+        <execution><id>default-compile</id><phase>none</phase></execution>
+        <execution><id>default-testCompile</id><phase>none</phase></execution>
+      </executions>
+      <configuration>
+        <skip>true</skip>
+      </configuration>
+    </plugin>
+
+    <!-- Surefire (to use maven profiles) -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.2.5</version>
+      <configuration>
+        <useModulePath>false</useModulePath>
+        <argLine>${surefire.argLine}</argLine>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
+
+  <profiles>
+    <profile>
+      <id>money-transfer-service</id>
+      <properties>
+        <surefire.argLine>-javaagent:${aspectj.weaver}</surefire.argLine>
+      </properties>
+      <build>
+        <testResources>
+          <testResource>
+            <directory>src/test/resources/aop/money-transfer-service</directory>
+            <targetPath>META-INF</targetPath>
+          </testResource>
+        </testResources>
+      </build>
+    </profile>
+    <profile>
+      <id>around-advice</id>
+      <properties>
+        <surefire.argLine>-javaagent:${aspectj.weaver}</surefire.argLine>
+      </properties>
+      <build>
+        <testResources>
+          <testResource>
+            <directory>src/test/resources/aop/around-advice</directory>
+            <targetPath>META-INF</targetPath>
+          </testResource>
+        </testResources>
+      </build>
+    </profile>
+  </profiles>
+</project>
