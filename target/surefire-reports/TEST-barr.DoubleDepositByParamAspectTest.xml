@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="barr.MoneyTransferServiceAspectTest" time="0.033" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="barr.DoubleDepositByParamAspectTest" time="0.013" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +15,8 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Owner\AppData\Local\Temp\surefire15959473424595828812\surefirebooter-20251015161948125_3.jar C:\Users\Owner\AppData\Local\Temp\surefire15959473424595828812 2025-10-15T16-19-48_015-jvmRun1 surefire-20251015161948125_1tmp surefire_0-20251015161948125_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Owner\AppData\Local\Temp\surefire16472647578970116628\surefirebooter-20251015154957246_3.jar C:\Users\Owner\AppData\Local\Temp\surefire16472647578970116628 2025-10-15T15-49-57_151-jvmRun1 surefire-20251015154957246_1tmp surefire_0-20251015154957246_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="MoneyTransferServiceAspectTest"/>
     <property name="surefire.test.class.path" value="C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\target\test-classes;C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\target\classes;C:\Users\Owner\.m2\repository\org\aspectj\aspectjrt\1.9.24\aspectjrt-1.9.24.jar;C:\Users\Owner\.m2\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar;C:\Users\Owner\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Owner\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Owner\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Owner\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Owner\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Owner\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Owner\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Owner\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Owner"/>
@@ -31,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Owner\AppData\Local\Temp\surefire15959473424595828812\surefirebooter-20251015161948125_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Owner\AppData\Local\Temp\surefire16472647578970116628\surefirebooter-20251015154957246_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21+35-LTS-2513"/>
@@ -59,14 +58,15 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="moneyTransferServiceAspectTest" classname="barr.MoneyTransferServiceAspectTest" time="0.015">
-    <failure message="destination account should receive double (200) ==&gt; expected: &lt;200.0&gt; but was: &lt;100.0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: destination account should receive double (200) ==> expected: <200.0> but was: <100.0>
+  <testcase name="doubleDepositByParam" classname="barr.DoubleDepositByParamAspectTest" time="0.012">
+    <failure message="expected: &lt;1200.0&gt; but was: &lt;1100.0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1200.0> but was: <1100.0>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
-	at barr.MoneyTransferServiceAspectTest.moneyTransferServiceAspectTest(MoneyTransferServiceAspectTest.java:18)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1014)
+	at barr.DoubleDepositByParamAspectTest.doubleDepositByParam(DoubleDepositByParamAspectTest.java:17)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -74,11 +74,11 @@
     <system-out><![CDATA[
 MoneyTransferService object created
 MoneyTransferService: BEFORE TRANSACTION: Balance of Account: 1 is 1000.0
-MoneyTransferService: BEFORE TRANSACTION: Balance of Account: 2 is 0.0
+MoneyTransferService: BEFORE TRANSACTION: Balance of Account: 2 is 1000.0
 100.0 withdrawn from account:1
 100.0 deposited into account:2
 MoneyTransferService: AFTER TRANSACTION: Balance of Account: 1 is 900.0
-MoneyTransferService: AFTER TRANSACTION: Balance of Account: 2 is 100.0
+MoneyTransferService: AFTER TRANSACTION: Balance of Account: 2 is 1100.0
 ]]></system-out>
   </testcase>
 </testsuite>
