@@ -1,3 +1,4 @@
+package MoneyTransfer;
 
 import java.lang.*;
 import java.io.*;
