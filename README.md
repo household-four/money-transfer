@@ -13,19 +13,18 @@ However, I get one of two results each time I run this:
 1. The test runs but fails (unable to see the 'logTrans' method in the class)
 2. The test does not run (compiler error)
 
-
 ```sh
 # Situation 1
-[ERROR] Failed to execute goal org.codehaus.mojo:aspectj-maven-plugin:1.15.0:test-compile (default) on project moneytransfer: AJC compiler errors:
-[ERROR] error unrecognized single argument: "-17"
-[ERROR] error no sources specified
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! -- in barr.AroundAdviceAspectTest
+[ERROR] barr.AroundAdviceAspectTest.aroundAdviceAspectTest -- Time elapsed: 0.014 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected additionalmethod 'logTrans' not found in MoneyTransferService ==> expected: not <null> 
 ```
 
 ```sh
 # Situation 2
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.031 s <<< FAILURE! -- in barr.AroundAdviceAspectTest
-[ERROR] barr.AroundAdviceAspectTest.aroundAdviceAspectTest -- Time elapsed: 0.014 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected additionalmethod 'logTrans' not found in MoneyTransferService ==> expected: not <null> 
+[ERROR] Failed to execute goal org.codehaus.mojo:aspectj-maven-plugin:1.15.0:test-compile (default) on project moneytransfer: AJC compiler errors:
+[ERROR] error unrecognized single argument: "-17"
+[ERROR] error no sources specified
 ```
 
 The following files may not be modified (according to the assignment instructions):
