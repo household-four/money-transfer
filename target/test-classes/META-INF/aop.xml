@@ -1,8 +1,8 @@
 <aspectj>
   <weaver>
-    <include within="MoneyTransfer..*"/>
+    <include within="barr..*"/>
   </weaver>
   <aspects>
-    <aspect name="barr.MoneyTransferServiceAspect"/>
+    <aspect name="barr.AroundAdviceAspect"/>
   </aspects>
 </aspectj>

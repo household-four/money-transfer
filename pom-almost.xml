@@ -54,18 +54,7 @@
         <excludes>
           <exclude>**/barr/*Aspect.java</exclude>
         </excludes>
-        <skip>true</skip>
       </configuration>
-      <executions>
-        <execution>
-          <id>default-compile</id>
-          <phase>none</phase>
-        </execution>
-        <execution>
-          <id>default-testCompile</id>
-          <phase>none</phase>
-        </execution>
-      </executions>
     </plugin>
   </plugins>
 </build>
@@ -75,18 +64,14 @@
       <properties>
         <surefire.argLine>-javaagent:${aspectj.weaver}</surefire.argLine>
       </properties>
-      <dependencies>
-        <dependency>
-          <groupId>org.aspectj</groupId>
-          <artifactId>aspectjrt</artifactId>
-          <version>${aspectj.version}</version>
-        </dependency>
-      </dependencies>
       <build>
         <testResources>
           <testResource>
             <directory>src/test/resources/aop/money-transfer-service</directory>
             <targetPath>META-INF</targetPath>
+            <includes>
+              <include>aop.xml</include>
+            </includes>
           </testResource>
         </testResources>
         <plugins>
@@ -95,17 +80,21 @@
             <artifactId>aspectj-maven-plugin</artifactId>
             <version>1.15.0</version>
             <configuration>
-              <complianceLevel>1.8</complianceLevel>
+              <complianceLevel>17</complianceLevel>
               <showWeaveInfo>true</showWeaveInfo>
               <verbose>true</verbose>
+              <sources>
+                <source>src/main/java</source>
+              </sources>
               <includes>
-                <include>**/MoneyTransferServiceAspect.java</include>
+                <include>barr/MoneyTransferServiceAspect.java</include>
               </includes>
+              <testOutputDirectory>${project.build.testOutputDirectory}</testOutputDirectory>
             </configuration>
             <executions>
               <execution>
                 <goals>
-                  <goal>compile</goal>
+                  <!-- <goal>compile</goal> -->
                   <goal>test-compile</goal>
                 </goals>
               </execution>
@@ -119,13 +108,6 @@
       <properties>
         <surefire.argLine>-javaagent:${aspectj.weaver}</surefire.argLine>
       </properties>
-      <dependencies>
-        <dependency>
-          <groupId>org.aspectj</groupId>
-          <artifactId>aspectjrt</artifactId>
-          <version>${aspectj.version}</version>
-        </dependency>
-      </dependencies>
       <build>
         <testResources>
           <testResource>
@@ -133,29 +115,6 @@
             <targetPath>META-INF</targetPath>
           </testResource>
         </testResources>
-        <plugins>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>aspectj-maven-plugin</artifactId>
-            <version>1.15.0</version>
-            <configuration>
-              <complianceLevel>1.8</complianceLevel>
-              <showWeaveInfo>true</showWeaveInfo>
-              <verbose>true</verbose>
-              <includes>
-                <include>**/AroundAdviceAspect.java</include>
-              </includes>
-            </configuration>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>compile</goal>
-                  <goal>test-compile</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
       </build>
     </profile>
   </profiles>
