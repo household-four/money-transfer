@@ -15,7 +15,7 @@ Uses Maven profiles to test individual AspectJ aspects.
 | 5 | PrintOnBalanceSetAspect | PrintOnBalanceSetAspectTest | `mvn -P balance-set -Dtest=PrintOnBalanceSetAspectTest test` |
 | 6 | PrintEveryMethodAspect | PrintEveryMethodAspectTest | `mvn -P print-method -Dtest=PrintEveryMethodAspectTest test` |
 | 7 | TieredBonusAspect | TieredBonusAspectTest | `mvn -P tiered-bonus -Dtest=TieredBonusAspectTest test` |
-| 8 |  |  |  |
+| 8 | ReduceThirdTransferAspect | ReduceThirdTransferAspectTest | `mvn -P third-transfer -Dtest=ReduceThirdTransferAspectTest test` |
 | 9 |  |  |  |
 
 # Credits

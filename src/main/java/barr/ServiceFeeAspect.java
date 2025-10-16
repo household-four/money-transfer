@@ -4,7 +4,8 @@ public aspect ServiceFeeAspect {
     
     pointcut transferExec(MoneyTransferService s, Account from, Account to, double amt) :
     execution(public void MoneyTransferService.moneyTransfer(Account, Account, double))
-        && this(s) && args(from, to, amt);
+        && this(s) 
+            && args(from, to, amt);
     
     
     after(MoneyTransferService s, Account from, Account to, double amt) : transferExec(s, from, to, amt) {
