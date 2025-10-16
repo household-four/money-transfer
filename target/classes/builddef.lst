@@ -8,4 +8,4 @@ C:\Users\Owner\.m2\repository\org\aspectj\aspectjrt\1.9.24\aspectjrt-1.9.24.jar;
 C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\target\classes
 -s
 C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\target\generated-sources\aspectj-maven-plugin
-C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\src\main\java\barr\PrintOnBalanceSetAspect.java
+C:\Users\Owner\Documents\Grad_School\Fall 2025\SWE\Wk6\MoneyTransfer\src\main\java\barr\PrintEveryMethodAspect.java

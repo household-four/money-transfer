@@ -13,7 +13,7 @@ Uses Maven profiles to test individual AspectJ aspects.
 | 3 | TenPercentAspect | TenPercentAspectTest | `mvn -P ten-percent -Dtest=TenPercentAspectTest test` |
 | 4 | ServiceFeeAspect | ServiceFeeAspectTest | `mvn -P service-fee -Dtest=ServiceFeeAspectTest test` | 
 | 5 | PrintOnBalanceSetAspect | PrintOnBalanceSetAspectTest | `mvn -P balance-set -Dtest=PrintOnBalanceSetAspectTest test` |
-| 6 |  |  |  |
+| 6 | PrintEveryMethodAspect | PrintEveryMethodAspectTest | `mvn -P print-method -Dtest=PrintEveryMethodAspectTest test` |
 | 7 |  |  |  |
 | 8 |  |  |  |
 | 9 |  |  |  |
