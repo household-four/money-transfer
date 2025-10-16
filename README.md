@@ -1,9 +1,12 @@
 # About
 Author: Christen Barringer
 
-Uses Maven profiles to test individual AspectJ aspects. 
+This project uses Maven profiles to test individual AspectJ aspects. It uses load-time weaving to ensure only the relevant aspects are compiled and woven into the program.
 
 # Aspects and Tests
+
+The following aspects were created to modify the behavior of the MoneyTransferService. Use the command in the Command column to run the test for the aspect. 
+
 | Assignment Item | Aspect | Test | Command | 
 | ----- | ----- | ----- | --- |
 | None | AroundAdviceAspect | AroundAdviceAspectTest | `mvn -P around-advice -Dtest=AroundAdviceAspectTest test` |
@@ -23,7 +26,7 @@ Uses Maven profiles to test individual AspectJ aspects.
 ## Custom Aspects (step 9)
 - StealFromRecipientAspect reverses the transaction after it goes through. 
 - DrainAccountAspect takes everything from the recipient, leaving them with $1.
-- PerformanceStatsAspect tracks and prints statistics for each transfer
+- PerformanceStatsAspect tracks and prints statistics for each transfer by using inter-type fields.
 
 # Credits
 Credit to Tingshuo Miao for helping me fix my Maven profiles build issues.
