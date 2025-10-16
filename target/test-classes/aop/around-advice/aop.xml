@@ -3,6 +3,6 @@
     <include within="barr..*"/>
   </weaver>
   <aspects>
-    <aspect name="barr.TenPercentAspect"/>
+    <aspect name="barr.AroundAdviceAspect"/>
   </aspects>
 </aspectj>
