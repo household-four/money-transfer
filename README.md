@@ -14,7 +14,7 @@ Uses Maven profiles to test individual AspectJ aspects.
 | 4 | ServiceFeeAspect | ServiceFeeAspectTest | `mvn -P service-fee -Dtest=ServiceFeeAspectTest test` | 
 | 5 | PrintOnBalanceSetAspect | PrintOnBalanceSetAspectTest | `mvn -P balance-set -Dtest=PrintOnBalanceSetAspectTest test` |
 | 6 | PrintEveryMethodAspect | PrintEveryMethodAspectTest | `mvn -P print-method -Dtest=PrintEveryMethodAspectTest test` |
-| 7 |  |  |  |
+| 7 | TieredBonusAspect | TieredBonusAspectTest | `mvn -P tiered-bonus -Dtest=TieredBonusAspectTest test` |
 | 8 |  |  |  |
 | 9 |  |  |  |
 
