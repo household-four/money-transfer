@@ -111,6 +111,28 @@
               </execution>
             </executions>
           </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.3.1</version>
+            <executions>
+              <execution>
+                <id>copy-aop-xml</id>
+                <phase>process-test-resources</phase>
+                <goals><goal>copy-resources</goal></goals>
+                <configuration>
+                  <overwrite>true</overwrite>
+                  <outputDirectory>${project.build.testOutputDirectory}/META-INF</outputDirectory>
+                  <resources>
+                    <resource>
+                      <directory>src/test/resources/aop/money-transfer-service</directory>
+                      <includes><include>aop.xml</include></includes>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
@@ -152,6 +174,28 @@
                   <goal>compile</goal>
                   <goal>test-compile</goal>
                 </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.3.1</version>
+            <executions>
+              <execution>
+                <id>copy-aop-xml</id>
+                <phase>process-test-resources</phase>
+                <goals><goal>copy-resources</goal></goals>
+                <configuration>
+                  <overwrite>true</overwrite>
+                  <outputDirectory>${project.build.testOutputDirectory}/META-INF</outputDirectory>
+                  <resources>
+                    <resource>
+                      <directory>src/test/resources/aop/around-advice</directory>
+                      <includes><include>aop.xml</include></includes>
+                    </resource>
+                  </resources>
+                </configuration>
               </execution>
             </executions>
           </plugin>
