@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: barr.DoubleDepositByParamAspectTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.013 s <<< FAILURE! -- in barr.DoubleDepositByParamAspectTest
-barr.DoubleDepositByParamAspectTest.doubleDepositByParam -- Time elapsed: 0.012 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1200.0> but was: <1100.0>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1014)
-	at barr.DoubleDepositByParamAspectTest.doubleDepositByParam(DoubleDepositByParamAspectTest.java:17)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 s -- in barr.DoubleDepositByParamAspectTest
