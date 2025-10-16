@@ -3,6 +3,8 @@ Author: Christen Barringer
 
 This project uses Maven profiles to test individual AspectJ aspects. It uses load-time weaving to ensure only the relevant aspects are compiled and woven into the program.
 
+Aspect code is within src/main/java/barr and test code is within src/test/java/barr. Profile information is within the `profiles` tag of pom.xml and in src/test/resources/aop.
+
 # Aspects and Tests
 
 The following aspects were created to modify the behavior of the MoneyTransferService. Use the command in the Command column to run the test for the aspect. 
